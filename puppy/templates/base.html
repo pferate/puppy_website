@@ -1,0 +1,33 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Puget Sound Programming Python (PuPPy){% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+<link href="{{ url_for('static', filename='css/pspython.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block navbar %}
+{% include "navbar.html" %}
+<!--
+<a class="logo" href="/">
+    <img src="http://simplybuiltprod.s3.amazonaws.com/media/2035/l8H688c9bnS5aeiAfPdJPw.png">
+</a>
+-->
+{## {{nav.top.render()}} ##}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+    </div>
+    {% endfor %}
+
+    {% block page_content %}{% endblock %}
+</div>
+{% endblock %}

@@ -1,0 +1,66 @@
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ url_for('main.index') }}">Puget Sound Programming Python (PuPPy)</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Our Meetups
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/meetups/monthly?page=next" title="Upcoming Monthly Meetup">Upcoming Monthly Meetup</a>
+                </li>
+                <li>
+                  <a href="/meetups/monthly?page=previous" title="Previous Monthly Meetups">Previous Monthly Meetups</a>
+                </li>
+                <li class="divider" role="separator"></li>
+                <li>
+                  <a href="/meetups/programming-night?page=seattle" title="Programming Nights (Seattle)">Programming Nights (Seattle)</a>
+                </li>
+                <li>
+                  <a href="/meetups/programming-night?page=eastside" title="Programming Nights (East Side)">Programming Nights (East Side)</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">About Us
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/about?page=organizers" title="Our Organizers">Our Organizers</a>
+                </li>
+                <li>
+                  <a href="/about?page=council" title="Advisory Council">Advisory Council</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/sponsers" title="Sponsers">Sponsers</a>
+            </li>
+            <li class="dropdown">
+              <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">Contact Us
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/contact?page=join" title="Join Us">Join Us</a>
+                </li>
+                <li>
+                  <a href="/contact?page=feedback" title="Feedback">Feedback</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </div>
+</nav>
