@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block navbar %}
-{% include "navbar.html" %}
+{% include "_navbar.html" %}
 <!--
 <a class="logo" href="/">
     <img src="http://simplybuiltprod.s3.amazonaws.com/media/2035/l8H688c9bnS5aeiAfPdJPw.png">
@@ -30,4 +30,8 @@
 
     {% block page_content %}{% endblock %}
 </div>
+
+{% block footer %}
+{% include "_footer.html" %}
+{% endblock %}
 {% endblock %}
