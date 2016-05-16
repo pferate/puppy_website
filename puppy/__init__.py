@@ -5,8 +5,6 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from config import config
 
-from puppy.navigation import nav
-
 bootstrap = Bootstrap()
 moment = Moment()
 db = SQLAlchemy()
@@ -25,7 +23,6 @@ def create_app(config_name):
     moment.init_app(app)
     db.init_app(app)
     login_manager.init_app(app)
-    nav.init_app(app)
 
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
